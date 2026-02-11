@@ -1,33 +1,65 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact de Soleyman Zeghoudi</title>
+    <title>Contact | Soleyman Zeghoudi</title>
     <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
     <header>
-        <h1>Portfolio de Soleyman Zeghoudi</h1>
+        <div class="header-container">
+            <h1>Me Contacter</h1>
+            <p class="tagline">Une question ou une opportunité professionnelle ?</p>
+        </div>
         <nav>
             <ul>
-                <li><a href="Soleyman ZEGHOUDI.CVMAJ (1).pdf" download>CV</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="competences.html">Compétences</a></li>
                 <li><a href="projets.html">Projets</a></li>
                 <li><a href="veille.html">Veille Technologique</a></li>
-                <li><a href="https://www.francecompetences.fr/recherche/rncp/35340/" target="_blank">Référentiel BTS</a></li>
-                <li><a href="https://institutionsaintaspais.fr/" target="_blank">Institution Saint Aspais</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="contact">
-            <h2>Contactez-moi</h2>
-            <p>Vous pouvez me contacter par email à l'adresse suivante : soleymanzeghoudi48@gmail.com</p>
+        <section class="intro">
+            <h2>Envoyez-moi un message</h2>
+            <p>N'hésitez pas à me contacter via le formulaire ci-dessous ou directement par email.</p>
+            
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom / Entreprise</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Objet</label>
+                    <select id="subject" name="subject">
+                        <option value="stage">Stage / Alternance</option>
+                        <option value="projet">Question sur un projet</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Envoyer le message</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Portfolio de Soleyman Zeghoudi | Réalisé par Soleyman Zeghoudi</p>
+        <p>&copy; 2026 Soleyman Zeghoudi - <a href="contact.html">Me contacter</a></p>
     </footer>
 </body>
 </html>
