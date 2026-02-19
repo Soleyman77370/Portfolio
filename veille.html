@@ -10,74 +10,58 @@
     <header>
         <div class="header-container">
             <h1>Veille Technologique</h1>
-            <p class="tagline">Sujet : La sécurisation des échanges dans les messageries chiffrées</p>
+            <p class="tagline">La sécurisation des échanges dans les messageries chiffrées</p>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="competences.html">Compétences</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="veille.html">Veille Technologique</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Retour à l'accueil du Portfolio</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="intro">
-            <h2>Méthodologie de Veille</h2>
-            <p>Ma veille technologique porte sur l'évolution des protocoles de chiffrement et les enjeux géopolitiques liés aux messageries sécurisées. J'utilise des outils comme <strong>Feedly</strong> pour agréger les flux RSS et je consulte régulièrement les bulletins de l'<strong>ANSSI</strong>.</p>
+        <section class="intro content-section">
+            <h2>Qu'est-ce que la Veille Technologique ?</h2>
+            <p>La veille technologique consiste à s'informer de façon systématique sur les innovations les plus récentes et les évolutions de notre secteur. Pour un développeur SLAM, c'est essentiel pour ne pas être dépassé par les nouvelles technologies et les enjeux de sécurité.</p>
         </section>
 
-        <section class="flux-veille">
-            <h2>Journal de Bord (Séances 1 à 15)</h2>
+        <section class="sujet-veille content-section">
+            <h2>Sujet : Les Messageries Chiffrées (Signal, Telegram...)</h2>
+            <p>Dans un contexte de surveillance numérique accrue, le chiffrement de bout en bout (E2EE) est devenu la norme pour garantir la confidentialité des échanges.</p>
+            
+            <div class="grid-2-cols">
+                <article class="veille-card">
+                    <h3>Les technologies clés</h3>
+                    <ul>
+                        <li><strong>Chiffrement de bout en bout (E2EE) :</strong> Seuls l'expéditeur et le destinataire peuvent lire les messages.</li>
+                        <li><strong>Protocole Signal :</strong> Réputé pour être le plus sûr au monde, son code est open-source (utilisé par Signal et WhatsApp).</li>
+                        <li><strong>Le protocole MTProto :</strong> Développé par Telegram, il propose une approche différente de la cryptographie.</li>
+                    </ul>
+                </article>
 
-            <div class="news-item">
-                <span class="date">Séances 1 à 3</span>
-                <h4>Introduction et Choix du Sujet</h4>
-                <p>Définition d'un service de messagerie chiffrée : permet d’échanger des messages de manière sécurisée (E2EE). Comparaison initiale entre Signal (chiffrement par défaut) et Telegram (architecture hybride).</p>
-                <small>Sources : LeClairieur Fnac, Le Monde</small>
+                <article class="veille-card">
+                    <h3>Ma méthodologie de veille</h3>
+                    <p>Pour suivre ce sujet, j'utilise les outils suivants :</p>
+                    <ul>
+                        <li><strong>Feedly :</strong> Pour agréger les flux RSS de sites spécialisés (LeMondeInformatique, ZDNet, The Hacker News).</li>
+                        <li><strong>Réseaux Sociaux :</strong> Suivi d'experts en cybersécurité et de cryptographes sur X (ex-Twitter).</li>
+                        <li><strong>Newsletters & Alertes :</strong> Abonnement aux bulletins officiels de l'ANSSI (CERT-FR).</li>
+                    </ul>
+                </article>
             </div>
+        </section>
 
+        <section class="flux-veille content-section">
+            <h2>Dernières actualités marquantes</h2>
             <div class="news-item">
-                <span class="date">Séances 4 & 7 & 8</span>
-                <h4>Géopolitique : Conflits et Affaire Telegram</h4>
-                <p>Analyse de l'usage de Telegram en zone de conflit (Ukraine/Russie). Étude de l'impact de l'arrestation de <strong>Pavel Durov</strong> en France en 2024, posant la question de la responsabilité des plateformes face à la loi.</p>
-                <small>Sources : Le Monde, Courrier International, France 24</small>
+                <span class="date">Année 2025-2026</span>
+                <h4>L'émergence du chiffrement post-quantique</h4>
+                <p>Face à la menace future des ordinateurs quantiques capables de briser les chiffrements actuels, des applications comme Signal ont commencé à intégrer de nouveaux algorithmes de protection post-quantiques (PQXDH) pour sécuriser les clés d'échange.</p>
             </div>
-
             <div class="news-item">
-                <span class="date">Séances 5 & 14</span>
-                <h4>Cadre Législatif : Surveillance vs Vie Privée</h4>
-                <p>Étude des lois permettant l'accès aux données (narcotrafic) et du projet européen <strong>Chat Control</strong> visant à scanner les terminaux (Client-Side Scanning).</p>
-                <small>Sources : Public Sénat, 01net, La Quadrature du Net</small>
-            </div>
-
-            <div class="news-item">
-                <span class="date">Séances 6 & 10</span>
-                <h4>Chiffrement Post-Quantique (PQ3)</h4>
-                <p>Anticipation des menaces futures : intégration de protocoles résistants aux ordinateurs quantiques (PQ3 chez Apple, PQXDH chez Signal) pour contrer le "Harvest Now, Decrypt Later".</p>
-                <small>Sources : Arxiv, Wired, Apple Security Blog</small>
-            </div>
-
-            <div class="news-item">
-                <span class="date">Séances 9 & 11</span>
-                <h4>Souveraineté et Anonymat : Olvid et Pseudos</h4>
-                <p>Promotion d'<strong>Olvid</strong> (solution française sans serveur d'annuaire) et mise en place des noms d'utilisateurs sur Signal pour masquer le numéro de téléphone.</p>
-                <small>Sources : ANSSI, Signal Blog, TechCrunch</small>
-            </div>
-
-            <div class="news-item">
-                <span class="date">Séances 12 & 13</span>
-                <h4>Limites techniques : Pegasus et Censure</h4>
-                <p>Analyse des logiciels espions de type "Zero-click" (Pegasus) qui compromettent le terminal, et utilisation de proxys pour contourner la censure dans les pays autoritaires.</p>
-                <small>Sources : Amnesty International, Reuters</small>
-            </div>
-
-            <div class="news-item summary">
-                <span class="date">Séance 15</span>
-                <h4>Synthèse Générale de la Veille</h4>
-                <p>La messagerie chiffrée est au cœur d'un équilibre fragile entre sécurité absolue et régulation d'État. Les tendances 2026 confirment une migration vers le post-quantique et une lutte accrue pour la protection des métadonnées.</p>
+                <span class="date">Évolution récente</span>
+                <h4>Telegram vs Signal : le débat sur la sécurité par défaut</h4>
+                <p>Débat constant dans la communauté cyber : contrairement à Signal, les échanges sur Telegram ne sont pas chiffrés de bout en bout par défaut (il faut activer les "Secret Chats"). Cela implique que les données transitent en clair sur leurs serveurs, posant des questions de souveraineté des données.</p>
             </div>
         </section>
     </main>

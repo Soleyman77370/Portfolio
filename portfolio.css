@@ -1,183 +1,246 @@
-/* --- Variables de couleurs (Thème Moderne & Pro) --- */
+/* =========================================
+   PORTFOLIO BG - BTS SIO SLAM
+   Thème : Dark Tech & Glassmorphism
+========================================= */
+
+/* --- 1. VARIABLES (La palette de couleurs pro) --- */
 :root {
-    --primary-color: #2c3e50;    /* Bleu nuit sérieux */
-    --accent-color: #3498db;     /* Bleu plus vif pour l'interaction */
-    --bg-light: #f8f9fa;        /* Fond très clair */
-    --text-dark: #333333;
-    --text-light: #ffffff;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+    --bg-dark: #0f172a;         /* Fond principal (Bleu très sombre) */
+    --bg-card: #1e293b;         /* Fond des cartes */
+    --primary: #38bdf8;         /* Bleu cyan (Couleur principale) */
+    --accent: #818cf8;          /* Violet/Indigo (Couleur secondaire) */
+    --text-main: #f8fafc;       /* Texte blanc cassé */
+    --text-muted: #94a3b8;      /* Texte gris clair pour les descriptions */
+    --border-color: #334155;    /* Bordures subtiles */
+    --glow: 0 0 20px rgba(56, 189, 248, 0.3); /* Effet néon */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- Reset & Base --- */
+/* --- 2. RESET & BASE --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--bg-light);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
-/* --- Header & Navigation --- */
+/* --- 3. HEADER & NAVIGATION (L'effet "Verre" / Glassmorphism) --- */
 header {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 2rem 0 0 0;
-    box-shadow: var(--shadow);
-}
-
-.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.8); /* Transparent */
+    backdrop-filter: blur(12px); /* L'effet verre flouté */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
     text-align: center;
-    padding-bottom: 1.5rem;
 }
 
-h1 {
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
+.header-container h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    /* Le texte en dégradé */
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
 }
 
 .tagline {
+    color: var(--text-muted);
+    font-size: 1.1rem;
     font-weight: 300;
-    opacity: 0.9;
-    font-style: italic;
 }
 
-nav {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 1rem 0;
-}
+nav { margin-top: 15px; }
 
 nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    list-style: none;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-nav ul li {
-    margin: 5px 15px;
+    gap: 20px;
 }
 
 nav ul li a {
-    color: var(--text-light);
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 8px;
     transition: var(--transition);
-    padding: 5px 10px;
-    border-radius: 4px;
+    border: 1px solid transparent;
 }
 
 nav ul li a:hover {
-    background-color: var(--accent-color);
-    color: white;
+    color: var(--primary);
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: var(--glow);
 }
 
-/* --- Contenu Principal --- */
+/* --- 4. STRUCTURE PRINCIPALE --- */
 main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-    min-height: 70vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.intro {
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    margin-bottom: 30px;
+.content-section {
+    padding: 80px 0 40px 0; /* Espace pour le scroll */
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    scroll-margin-top: 80px;
 }
 
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+/* Titres des sections */
 h2 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    border-left: 5px solid var(--accent-color);
-    padding-left: 15px;
-}
-
-.intro p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* --- Section Spécifique 2ème Année --- */
-.focus-2eme-annee {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    border-top: 4px solid var(--accent-color);
-    box-shadow: var(--shadow);
-}
-
-.focus-2eme-annee h3 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.focus-2eme-annee ul {
-    list-style: none;
-    padding-left: 10px;
-}
-
-.focus-2eme-annee ul li {
-    margin-bottom: 10px;
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 30px;
+    display: inline-block;
     position: relative;
-    padding-left: 25px;
 }
 
-.focus-2eme-annee ul li::before {
-    content: '✔';
+/* Petit trait stylé sous les titres H2 */
+h2::after {
+    content: '';
     position: absolute;
     left: 0;
-    color: var(--accent-color);
-    font-weight: bold;
+    bottom: -8px;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    border-radius: 2px;
+    transition: var(--transition);
 }
 
-/* --- Footer --- */
+.content-section:hover h2::after {
+    width: 100%; /* Le trait s'allonge au survol de la section */
+}
+
+h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+p, ul {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+ul { padding-left: 20px; }
+
+/* --- 5. CARTES & GRILLES (Le cœur du design) --- */
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.stage-item, .veille-card, .grid-2-cols > div {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+/* Animation au survol des cartes */
+.stage-item:hover, .veille-card:hover, .grid-2-cols > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--primary);
+}
+
+/* --- 6. LIENS & BOUTONS DE TÉLÉCHARGEMENT --- */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 8px rgba(129, 140, 248, 0.5);
+}
+
+/* Liens des documents avec un petit style bouton */
+#documents ul li a, .download-link {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    margin: 5px 0;
+}
+
+#documents ul li a:hover, .download-link:hover {
+    background: var(--primary);
+    color: var(--bg-dark);
+    text-shadow: none;
+    transform: translateX(5px);
+}
+
+/* --- 7. VEILLE TECHNOLOGIQUE SPÉCIFIQUE --- */
+.news-item {
+    background: var(--bg-card);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    transition: var(--transition);
+}
+
+.news-item:hover {
+    background: rgba(129, 140, 248, 0.05);
+    border-left-width: 8px;
+}
+
+.news-item .date {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--accent);
+    background: rgba(129, 140, 248, 0.1);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* --- 8. FOOTER --- */
 footer {
-    background-color: var(--primary-color);
-    color: var(--text-light);
     text-align: center;
-    padding: 30px 0;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
     margin-top: 50px;
 }
 
-footer a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* --- Adaptabilité Mobile (Responsive) --- */
+/* --- 9. RESPONSIVE (POUR LES MOBILES) --- */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav ul li {
-        margin: 8px 0;
-    }
-    
-    h1 {
-        font-size: 1.6rem;
-    }
-    
-    .intro {
-        padding: 25px;
-    }
+    .header-container h1 { font-size: 2rem; }
+    nav ul { flex-direction: column; gap: 10px; }
+    .content-section { padding: 50px 0 20px 0; }
+    .grid-2-cols { grid-template-columns: 1fr; }
 }
