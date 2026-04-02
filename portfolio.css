@@ -1,0 +1,290 @@
+/* =========================================
+   PORTFOLIO - DIRECTION ARTISTIQUE : TACTICAL KAKI V2
+   BTS SIO SLAM - Sombre, Structuré & Équipement Lourd
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* --- 1. VARIABLES (Noir & Dose de Kaki augmentée) --- */
+:root {
+    --bg-main: #0a0a0a;          /* Noir profond */
+    --bg-card: #121212;          /* Gris anthracite très foncé */
+    --bg-surface: #181818;       /* Gris béton */
+    
+    --border-color: #242424;     
+    
+    --text-main: #e5e5e5;        /* Blanc cassé */
+    --text-muted: #888888;       /* Gris moyen */
+    
+    /* La palette Kaki (Tactical Green) */
+    --accent: #5c664d;           /* Vert kaki de base */
+    --accent-hover: #7a8765;     /* Vert kaki plus clair */
+    --accent-dark: #2a3022;      /* Vert kaki très sombre pour les ombres/bordures */
+    --accent-transparent: rgba(92, 102, 77, 0.15); 
+    
+    --font-titles: 'Oswald', sans-serif;
+    --font-text: 'Inter', sans-serif;
+    
+    --header-height: 120px;
+    --transition: all 0.25s ease-in-out;
+}
+
+/* --- 2. BASE & TEXTURE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Couleur de surlignage du texte en Kaki */
+::selection {
+    background-color: var(--accent-hover);
+    color: #000;
+}
+
+/* Scrollbar furtive teintée kaki */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: var(--accent-dark); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    /* Texture type grip tactique */
+    background-image: radial-gradient(var(--accent-dark) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* --- 3. HEADER & NAVIGATION --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* Ligne kaki bien visible sous le menu */
+    border-bottom: 2px solid var(--accent);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-container h1 {
+    font-family: var(--font-titles);
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-main);
+}
+
+.tagline {
+    font-family: var(--font-text);
+    /* La tagline passe en Kaki */
+    color: var(--accent-hover);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+nav ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: var(--font-titles);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 15px;
+    border-radius: 4px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+/* Le survol du menu fait ressortir le fond kaki */
+nav ul li a:hover {
+    color: var(--text-main);
+    background-color: var(--accent-transparent);
+    border-color: var(--accent);
+}
+
+/* --- 4. STRUCTURE & SECTIONS --- */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--accent-dark);
+    scroll-margin-top: var(--header-height);
+}
+
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    font-family: var(--font-titles);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: var(--text-main);
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+}
+
+h2::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: var(--accent);
+    margin-right: 12px;
+}
+
+h3 {
+    font-family: var(--font-titles);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    /* Les sous-titres passent en Kaki */
+    color: var(--accent-hover);
+    margin: 15px 0 10px 0;
+}
+
+p, ul {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+/* --- 5. CARTES BENTO --- */
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stage-item, .veille-card, .grid-2-cols > div, .news-item {
+    background-color: var(--bg-card);
+    /* Bordure légèrement teintée kaki par défaut */
+    border: 1px solid var(--accent-dark);
+    border-radius: 4px;
+    padding: 25px;
+    transition: var(--transition);
+}
+
+/* Lueur kaki au survol */
+.stage-item:hover, .veille-card:hover, .grid-2-cols > div:hover, .news-item:hover {
+    background-color: var(--bg-surface);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(92, 102, 77, 0.15);
+}
+
+/* --- 6. LIENS & BOUTONS TÉLÉCHARGEMENT --- */
+a {
+    color: var(--accent-hover);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--text-main);
+}
+
+/* Boutons d'action : Kaki solide, texte foncé */
+#documents ul li a, .download-link {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--accent);
+    color: #000;
+    font-family: var(--font-titles);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border-radius: 4px;
+    margin: 5px 0;
+    border: 1px solid var(--accent);
+    transition: var(--transition);
+}
+
+#documents ul li a:hover, .download-link:hover {
+    background-color: var(--accent-hover);
+    color: #000;
+    border-color: var(--accent-hover);
+    transform: translateX(4px);
+    box-shadow: -4px 4px 0px rgba(0,0,0,0.5);
+}
+
+/* --- 7. VEILLE ACTUS --- */
+.news-item {
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent);
+}
+
+.news-item .date {
+    display: inline-block;
+    font-family: var(--font-titles);
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: var(--accent-dark);
+    color: var(--text-main);
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- 8. FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid var(--accent-dark);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    :root { --header-height: 150px; }
+    header { padding: 15px 5px; }
+    .header-container h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+}

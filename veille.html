@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique | Soleyman Zeghoudi</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Veille Technologique 2024-2026</h1>
+            <p class="tagline">Sujet : Architecture, Cryptographie et Sécurité des Messageries (E2EE)</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="veille.html" class="active">Veille Technologique</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tech-watch-container">
+        <section class="intro-tech">
+            <h2>Axe d'analyse technique</h2>
+            <p>Cette veille se concentre sur l'évolution des protocoles cryptographiques face à l'informatique quantique, la gestion des métadonnées (Zero-Knowledge) et la sécurisation des terminaux (Endpoint Security). L'objectif est d'analyser le code et l'architecture réseau qui garantissent la confidentialité des échanges.</p>
+        </section>
+
+        <section class="tech-articles">
+            
+            <article class="tech-card">
+                <header>
+                    <span class="tech-badge">Algorithmique / PQC</span>
+                    <span class="tech-date">Fév. 2026</span>
+                </header>
+                <h3>1. Déploiement du protocole Post-Quantique (PQ3)</h3>
+                <p>Face à la menace du <em>Harvest Now, Decrypt Later</em>, transition d'Apple et Signal vers la cryptographie post-quantique. Le protocole PQ3 abandonne RSA pour s'appuyer sur des <strong>réseaux euclidiens (Kyber)</strong>. Intégration d'un mécanisme de <em>re-keying</em> périodique assurant une Post-Quantum Forward Secrecy.</p>
+                <a href="https://security.apple.com/blog/imessage-pq3/" target="_blank" class="tech-source">Source : Apple Security Engineering</a>
+            </article>
+
+            <article class="tech-card">
+                <header>
+                    <span class="tech-badge">Protocoles Réseau</span>
+                    <span class="tech-date">Déc. 2025</span>
+                </header>
+                <h3>2. Évolution du Double Ratchet Algorithm</h3>
+                <p>Le protocole standard E2EE (utilisant le Diffie-Hellman Ratchet et le Hash Chain) a été optimisé (libsignal) pour réduire l'empreinte mémoire sur les terminaux IoT, tout en maintenant l'intégrité de la poignée de main initiale <strong>X3DH</strong> (Extended Triple Diffie-Hellman).</p>
+                <a href="#" class="tech-source">Source : Signal Dev Blog</a>
+            </article>
+
+            <article class="tech-card">
+                <header>
+                    <span class="tech-badge">Architecture Serveur</span>
+                    <span class="tech-date">Nov. 2025</span>
+                </header>
+                <h3>3. Obfuscation des Métadonnées (Sealed Sender)</h3>
+                <p>Pour éviter la fuite de données de routage (qui parle à qui), implémentation de l'architecture <strong>Zero-Knowledge</strong>. Le serveur reçoit des paquets dont l'identité de l'expéditeur est chiffrée. Validation des utilisateurs via des <em>Zero-Knowledge Proofs (ZKP)</em> sans stocker de hash en clair en base de données.</p>
+                <a href="#" class="tech-source">Source : Technologie Review</a>
+            </article>
+
+            <article class="tech-card">
+                <header>
+                    <span class="tech-badge">Interopérabilité (API)</span>
+                    <span class="tech-date">Mars 2026</span>
+                </header>
+                <h3>4. Le défi technique des Gateways (DMA)</h3>
+                <p>Suite au Digital Markets Act, WhatsApp a ouvert son protocole. La difficulté technique réside dans l'utilisation de <strong>Passerelles (Gateways)</strong> pour convertir les en-têtes de paquets (headers) entre différentes implémentations d'applications, sans déchiffrer le <em>payload</em> (le message) pour éviter le <em>fallback</em> cryptographique.</p>
+                <a href="#" class="tech-source">Source : IETF Draft (MIM)</a>
+            </article>
+
+            <article class="tech-card">
+                <header>
+                    <span class="tech-badge">Sécurité Endpoint</span>
+                    <span class="tech-date">Janv. 2026</span>
+                </header>
+                <h3>5. Mitigation des attaques "Zero-Click"</h3>
+                <p>Le chiffrement protège les données en transit, mais le terminal reste vulnérable. Analyse des failles de type <strong>Heap Overflow</strong> dans les parseurs médias (WebP). La parade technique actuelle passe par le <strong>Sandboxing</strong> strict des processus de rendu d'images pour isoler le Kernel du système d'exploitation.</p>
+                <a href="#" class="tech-source">Source : NIST / CVE Details</a>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Soleyman Zeghoudi - Portfolio BTS SIO SLAM</p>
+    </footer>
+</body>
+</html>
